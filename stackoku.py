@@ -1,3 +1,15 @@
+# fill in the board here
+board_str =   """
+?3????
+??1???
+???2??
+?????3
+????4?
+2?????
+"""
+
+
+
 """
 Square class: Represents a square in the Stackdoku grid
     i,j: The Square knows it's position in the grid
@@ -322,7 +334,6 @@ class Board:
             bcopy.print_board(indent)
             bcopy.simple_solve()
             bcopy.print_board(indent)
-            input()
             is_ok = not bcopy.do_i_have_a_contradiction()
             if (not is_ok):
                 print (indent + "Board is not valid.")
@@ -339,13 +350,7 @@ class Board:
         return None
 
             
-b = Board(6, 
-          """??3???"""
-          """?3????"""
-          """???4??"""
-          """?????1"""
-          """4?????"""
-          """????2?"""
+b = Board(6, board_str.replace("\n", "")
           )
 
 print ("Initial Board:")
